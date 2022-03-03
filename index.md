@@ -1,8 +1,6 @@
-## Welcome to GitHub Pages
+## Point Of Sales (POS) Application based on Node.js and Flutter
 
-You can use the [editor on GitHub](https://github.com/vincentandreas/vincentandreas.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+A few months ago, we were making apps to store information about 
 
 ### Markdown
 
