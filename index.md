@@ -1,6 +1,26 @@
 ## Point Of Sales (POS) Application based on Node.js and Flutter
 
-A few months ago, we were making apps to store information about 
+A few months ago, we were making apps for stock inventory and record the purchase. The client needed mobile apps based. 
+
+We develop some feature, such as: 
+
+1. Stock inventory / Move Product feature
+   To monitoring product stock, from Warehouse to another Warehouse, or Warehouse to Store, and vice versa.
+2. Create Purchase feature
+   To record purchase.
+3. Financial Report feature
+   To show the sales report, from each Store, daily, monthly, or yearly. 
+   
+   
+Technology:
+
+1. Backend-side :
+   For the backend technology, we using Express.js, with MySql database. To make sure the backend-apps run correctly, we also making end-to-end test using Mocha. 
+2. Mobile apps-side :
+   We use flutter, with BLoC pattern, to make more convinient and responseful state-change.
+   
+   
+
 
 ### Markdown
 
