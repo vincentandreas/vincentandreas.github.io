@@ -1,6 +1,6 @@
 ## Point Of Sales (POS) Application based on Node.js and Flutter
 
-A few months ago, we were making apps for stock inventory and record the purchase. The client needed mobile apps based. 
+A few months ago, we were making apps for stock inventory and record the purchase. The client needed mobile apps to be used by the cashier, and stock keeper in the store. 
 
 We develop some feature, such as: 
 
@@ -15,7 +15,7 @@ We develop some feature, such as:
 Technology:
 
 1. Backend-side :
-   For the backend technology, we using Express.js, with MySql database. To make sure the backend-apps run correctly, we also making end-to-end test using Mocha. We also use Winston to log some exception that might happen in the future. 
+   For the backend technology, we using Node.js, with MySql database. To make sure the backend-apps run correctly, we also making end-to-end test using Mocha. We also use Winston to log some exception that might happen in the future. 
 2. Mobile apps-side :
    We use flutter, with BLoC pattern, to make more convinient and responseful state-change.
    
@@ -53,7 +53,7 @@ Syntax highlighted code block
 
 **Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image]('../images/addstock.png')
+[Link](url) and ![Image](/images/addstock.png)
 ```
 
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
