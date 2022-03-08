@@ -5,7 +5,7 @@ A few months ago, we were making apps for stock inventory and record the purchas
 We develop some feature, such as: 
 
 1. Stock inventory / Move Product feature
-   To monitoring product stock, from Warehouse to another Warehouse, or Warehouse to Store, and vice versa.
+   To monitoring product stock, from Warehouse to another Warehouse, Warehouse to Store, and vice versa.
 2. Create Purchase feature
    To record purchase.
 3. Financial Report feature
@@ -24,13 +24,16 @@ Technology:
 Of course, we find some problem while developing this apps, handled by 2 person that also have full time work. We only have 2 months for developing those apps. Here are some problems that we faced:
 
 1. Make the Report feature can run as light as possible.
-2. Carefully handle product stock that might be returned by the customer 
+2. Carefully handle product stock that can be changed where Purchase detail updated by users or returned by customers.
 
 Solution
 
 1. For the report, rather that making the scheduler. I choose to using 3 tables, daily_sales, monthly_sales, and yearly_sales, for record the total sales, made by specified store in some period of time. When a request to check past daily sales, if the date already passed maximum days to update purchase, we can assume the purchase total already fixed, so we can save the total result to the daily_sales table. So if we want to access the same date later, the total can be obtain from the table. It also help when the user want to check monthly / yearly report. If some of the date already calculated before, the apps can directly
 
-
+2. The purchase / invoice can be updated, if the user found some mistake in the invoice that need to be edited. The customer also can return some product in the invoice, if have two condition: 
+   a. The product is broken
+   b. The product is still good (returned by customer if the customer feel not really match with the product).
+If the returned product's condition still good, we will add the product to the store's stock, but if the product's condition is pretty bad, the product can't be add to the store's stock.
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
@@ -50,11 +53,8 @@ Syntax highlighted code block
 
 **Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image]('images/addstock.png')
+[Link](url) and ![Image]('../images/addstock.png')
 ```
-
-<img src="{{site.baseurl | prepend: site.url}}images/addstock.png" alt="Untitled" />
-
 
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
