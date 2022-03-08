@@ -4,7 +4,7 @@ A few months ago, I and my friend created apps for stock inventory and record pu
 
 For the apps, We develop some features, such as: 
 
-1. Stock inventory / Move Product feature
+1. Stock inventory/Move Product feature
    <p>To monitor product stock, from Warehouse to another Warehouse, Warehouse to Store, and vice versa.
 2. Create Purchase feature
    <p>To record purchases bought by customers.
