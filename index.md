@@ -10,7 +10,8 @@ We develop some feature, such as:
    To record purchase.
 3. Financial Report feature
    To show the sales report, from each Store, daily, monthly, or yearly. 
-   
+
+Database Design   
    
 Technology:
 
@@ -53,8 +54,9 @@ Syntax highlighted code block
 
 **Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](/images/addstock.png)
+[Link](url) and 
 ```
+![Image](./images/addstock.png)
 
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
