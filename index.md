@@ -1,6 +1,5 @@
 ## Point Of Sales (POS) Application based on Node.js and Flutter
 
-<p style="text-align: center;">
 A few months ago, I and my friend created apps for stock inventory and record purchases. The client needed mobile apps to be used by the cashier, and stockkeeper in the stores and warehouses. For the division of tasks, my main task is to handle the backend apps, and my friend's task is making the mobile apps. The deadline of the task is only 2 months, pretty challenging for us, that also work full time. In this article, I mainly talk about the backend side, and what's the problem that we were facing. 
 
 For the apps, We develop some features, such as: 
@@ -136,5 +135,3 @@ it("Make new PROD_ID stock to 50", function (done) {
 I hope this article can help people that currently develop backend program, to be aware with the similar problem that might be faced, so it can took a less time to fix that problem.
 
 Cheers!
-
-</p>
