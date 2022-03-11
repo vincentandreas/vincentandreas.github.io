@@ -1,6 +1,6 @@
-## Point Of Sales (POS) Application based on Node.js and Flutter
+## Point Of Sales (POS) Application based on Node.js and Flutter : Challenges that I faced
 
-A few months ago, I and my friend created apps for stock inventory and record purchases. The client needed mobile apps to be used by the cashier, and stockkeeper in the stores and warehouses. For the division of tasks, my main task is to handle the backend apps, and my friend's task is making the mobile apps. The deadline of the task is only 2 months, pretty challenging for us, that also work full time. In this article, I mainly talk about the backend side, and what's the problem that we were facing. 
+A few months ago, I and my friend created apps for stock inventory and record purchases. It based on mobile apps to be used by the cashier, and stock keeper in the stores and warehouses. For the division of tasks, my main task is to handle the backend apps, and my friend’s task is making the mobile apps. In this article, I mainly talk about the backend side, and what’s the problem that I’m facing when develop the backend.
 
 For the apps, We develop some features, such as: 
 
@@ -47,6 +47,10 @@ Of course, we find some problems while developing this app. Here are some proble
    - The customer feels not match with the product, but The product's condition is still good.
    <p>If the returned product's condition is still good, we will add the product to the store's stock, but if the product's condition is pretty bad, the product can't be added to the store's stock.
 
+   To make user can understand the stock movement easily, I also record the stock changes in dedicated table, ```storage_stock_hists```
+
+   ![Storage stock history](./images/storage-stock-hist.png)   
+
 3. Yes, the ```new Date()``` could return a different date time, when you try it on a local computer/server, even the server timezone is already the same. To handle that, one of my friends suggest using Moment.js, to generate the DateTime that we need. And it's really useful.
    
 4. Be aware when using ```conn.beginTransaction()```. If you need to call another query inside the ```conn.beginTransaction()``` , you need to use the same connection, as ```beginTransaction()``` use. If you use another connection, the result could be different.
@@ -77,7 +81,13 @@ Of course, we find some problems while developing this app. Here are some proble
 
 ### Testing
 
-For the testing, I use Mocha and Chai, to create End to end (e2e) testing. I choose using the e2e test to make sure another process related to the test is also runned. For example, if the purchase occurred, we want to make sure, the product stock also decreased, fit with the product that was bought by the customer. We can make the whole scenario, from a new store created, stock being added to the store, create new customer, and the new customer buys the product. This is the example of the e2e test when adding new product stock:
+For the testing, I use Mocha and Chai, to create End to end (e2e) testing. I choose using the e2e test to make sure another process related to the test is also run. For example, if the purchase occurred, we want to make sure, the product stock also decreased, fit with the product that was bought by the customer. We can make the whole scenario, from a new store created, stock being added to the store, create new customer, and the new customer buys the product. 
+
+For the test case, first, I list it manually, then develop it to end-to-end test case. This is some example of my test case:
+
+   ![Test Case](./images/test-case.png)   
+
+This is the example of the e2e test when adding new product stock:
 
 ``` javascript
 it("Make new PROD_ID stock to 50", function (done) {
@@ -117,7 +127,7 @@ it("Make new PROD_ID stock to 50", function (done) {
 **3. Add Stock Page**
 ![Add stock page](./images/addstock.png)
 
-**4. View Product Stock Page**
+**4. View Product's Stock Page**
 ![View product page](./images/view-prod-stock.png)
 
 **5. View Store's Stock Page**
